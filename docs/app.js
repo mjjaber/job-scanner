@@ -234,6 +234,70 @@ for (const id of ["f-age", "f-sort", "f-score", "f-status", "f-cat", "f-source",
 for (const id of ["f-q", "f-company"]) $(id).addEventListener("input", render);
 
 $("btn-refresh").onclick = refresh;
+
+/* ---- Scan now: trigger the GitHub Actions workflow via workflow_dispatch.
+   Needs a fine-grained PAT (this repo only, Actions read+write) pasted once
+   per device; it lives ONLY in this browser's localStorage. Without a token,
+   falls back to opening the Actions page (one click there). ---- */
+const REPO = "mjjaber/job-scanner";
+const ACTIONS_URL = `https://github.com/${REPO}/actions/workflows/scan.yml`;
+
+$("btn-scan").onclick = async () => {
+  let tok = localStorage.getItem("js_gh_token");
+  if (!tok) {
+    tok = prompt(
+      "To trigger scans from here, paste a GitHub fine-grained personal access token.\n\n" +
+      "Create one at github.com/settings/personal-access-tokens:\n" +
+      `  • Only select repositories → ${REPO}\n` +
+      "  • Repository permissions → Actions: Read and write\n\n" +
+      "It is stored only in this browser.\n" +
+      "Press Cancel to open the Actions page and run the scan there instead.");
+    if (!tok) { window.open(ACTIONS_URL, "_blank", "noopener"); return; }
+    localStorage.setItem("js_gh_token", tok.trim());
+  }
+  $("btn-scan").disabled = true;
+  $("scan-info").textContent = "requesting scan…";
+  try {
+    const r = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/scan.yml/dispatches`, {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + localStorage.getItem("js_gh_token"),
+        "Accept": "application/vnd.github+json",
+      },
+      body: JSON.stringify({ ref: "main" }),
+    });
+    if (r.status === 204) {
+      awaitFreshScan();
+    } else {
+      if (r.status === 401 || r.status === 403 || r.status === 404) localStorage.removeItem("js_gh_token");
+      $("scan-info").textContent = `scan request failed (HTTP ${r.status}) — token cleared, try again`;
+      $("btn-scan").disabled = false;
+    }
+  } catch (e) {
+    $("scan-info").textContent = "scan request failed — " + e.message;
+    $("btn-scan").disabled = false;
+  }
+};
+
+function awaitFreshScan() {
+  const before = DATA.generated_at;
+  const started = Date.now();
+  $("scan-info").textContent = "scan running on GitHub (~1–2 min)…";
+  const t = setInterval(async () => {
+    await refresh();
+    if (DATA.generated_at !== before) {
+      clearInterval(t);
+      $("btn-scan").disabled = false;
+      render();                       // scan-info gets rewritten by render()
+    } else if (Date.now() - started > 5 * 60000) {
+      clearInterval(t);
+      $("btn-scan").disabled = false;
+      $("scan-info").textContent = "scan is taking long — check the Actions tab";
+    } else {
+      $("scan-info").textContent = `scan running on GitHub… ${Math.round((Date.now() - started) / 1000)}s`;
+    }
+  }, 12000);
+}
 $("btn-filters").onclick = () => $("filters").classList.toggle("show");
 $("btn-notify").onclick = async () => {
   if (localStorage.getItem("js_notify") === "1") {

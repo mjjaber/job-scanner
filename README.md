@@ -41,6 +41,22 @@ so scores decay naturally as jobs age.
 **Applied / Favorite / Ignored marks are stored in each browser's localStorage** —
 they do not sync between devices (that's the trade-off for having no backend).
 
+## Manual "Scan now" from the dashboard
+
+The **⚡ Scan** button triggers a real scan on GitHub (instead of waiting for the
+next scheduled run). Because the dashboard is a public static page, GitHub needs
+proof it's you: a **fine-grained personal access token**, pasted once per device
+and stored only in that browser's localStorage — never in the repo.
+
+Create it at **github.com/settings/personal-access-tokens → Generate new token**:
+
+- *Only select repositories* → `job-scanner`
+- *Repository permissions* → **Actions: Read and write** (nothing else)
+
+Then click ⚡ Scan and paste it when prompted. Results appear automatically when
+the scan finishes (~1–2 min). Without a token, the button opens the repo's
+Actions page where *Run workflow* does the same thing with one click.
+
 ## Configuration
 
 Everything lives in two JSON files — no code changes needed:
