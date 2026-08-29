@@ -1,0 +1,43 @@
+name: scan
+
+on:
+  schedule:
+    # Every 10 minutes. GitHub delays scheduled runs under load; expect
+    # actual cadence of ~10-30 min. Per-source intervals in config.json
+    # keep gentle APIs (Remotive) from being hit on every run.
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - run: python scan.py
+
+      - name: Commit updated job data
+        run: |
+          git config user.name "job-scanner-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/jobs.json
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "scan: update jobs"
+            git push || (git pull --rebase && git push)
+          fi

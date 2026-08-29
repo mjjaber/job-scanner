@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment / secrets (none needed today, but never commit them)
+.env
+*.pem
+*.key
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Logs and scratch
+*.log

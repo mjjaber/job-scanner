@@ -1,0 +1,230 @@
+REMOTE JOB SCANNER TITLES
+========================================
+
+CLOUD, AZURE, SECURITY, AVD, SUPPORT, DEVOPS
+
+1. Azure Cloud Engineer
+2. Senior Azure Cloud Engineer
+3. Microsoft Azure Engineer
+4. Azure Infrastructure Engineer
+5. Senior Azure Infrastructure Engineer
+6. Azure Platform Engineer
+7. Senior Azure Platform Engineer
+8. Cloud Infrastructure Engineer
+9. Senior Cloud Infrastructure Engineer
+10. Cloud Platform Engineer
+11. Senior Cloud Platform Engineer
+12. Cloud Engineer
+13. Senior Cloud Engineer
+14. Azure Systems Engineer
+15. Senior Azure Systems Engineer
+16. Azure Solutions Engineer
+17. Cloud Solutions Engineer
+18. Azure Operations Engineer
+19. Cloud Operations Engineer
+20. Senior Cloud Operations Engineer
+21. Azure Virtual Desktop Engineer
+22. Senior Azure Virtual Desktop Engineer
+23. AVD Engineer
+24. Senior AVD Engineer
+25. Azure Virtual Desktop Administrator
+26. Azure Virtual Desktop Consultant
+27. Azure Virtual Desktop Specialist
+28. EUC Engineer
+29. Senior EUC Engineer
+30. End User Computing Engineer
+31. Senior End User Computing Engineer
+32. Digital Workplace Engineer
+33. Virtual Desktop Engineer
+34. Desktop Virtualization Engineer
+35. VDI Engineer
+36. Senior VDI Engineer
+37. Microsoft Virtualization Engineer
+38. Nerdio Engineer
+39. Nerdio Consultant
+40. Modern Workplace Engineer
+41. Microsoft Cloud Engineer
+42. Microsoft Infrastructure Engineer
+43. Microsoft 365 Engineer
+44. Senior Microsoft 365 Engineer
+45. M365 Engineer
+46. Microsoft 365 Cloud Engineer
+47. Microsoft 365 Administrator
+48. Microsoft Modern Workplace Engineer
+49. Microsoft Endpoint Engineer
+50. Endpoint Management Engineer
+51. Intune Engineer
+52. Senior Intune Engineer
+53. Microsoft Endpoint Administrator
+54. Windows Cloud Engineer
+55. Windows Systems Engineer
+56. Azure Security Engineer
+57. Cloud Security Engineer
+58. Senior Cloud Security Engineer
+59. Microsoft Cloud Security Engineer
+60. Azure Cloud Security Engineer
+61. Cloud Security Analyst
+62. Senior Cloud Security Analyst
+63. Cloud Security Consultant
+64. Azure Security Consultant
+65. Cloud Compliance Engineer
+66. Cloud Governance Engineer
+67. Azure Governance Engineer
+68. Cloud Security and Compliance Engineer
+69. Government Cloud Engineer
+70. Azure Government Cloud Engineer
+71. CMMC Cloud Engineer
+72. CMMC Engineer
+73. CMMC Consultant
+74. NIST Compliance Engineer
+75. NIST 800 171 Engineer
+76. Cloud Compliance Consultant
+77. Government Cloud Consultant
+78. Azure Government Consultant
+79. FedRAMP Cloud Engineer
+80. Federal Cloud Engineer
+81. Azure DevOps Engineer
+82. Cloud DevOps Engineer
+83. Infrastructure Automation Engineer
+84. Cloud Automation Engineer
+85. Azure Automation Engineer
+86. Infrastructure as Code Engineer
+87. Platform Operations Engineer
+88. Site Reliability Engineer
+89. Cloud Reliability Engineer
+90. Cloud Systems Engineer
+91. Azure Support Engineer
+92. Senior Azure Support Engineer
+93. Cloud Support Engineer
+94. Senior Cloud Support Engineer
+95. Enterprise Cloud Support Engineer
+96. Cloud Technical Support Engineer
+97. Technical Account Manager
+98. Cloud Technical Account Manager
+99. Azure Technical Account Manager
+100. Cloud Solutions Consultant
+
+DATA ENGINEERING, SQL, DATABASE, BI, AZURE DATA
+
+101. Data Engineer
+102. Senior Data Engineer
+103. Azure Data Engineer
+104. Senior Azure Data Engineer
+105. Cloud Data Engineer
+106. Senior Cloud Data Engineer
+107. Data Platform Engineer
+108. Senior Data Platform Engineer
+109. Data Infrastructure Engineer
+110. Senior Data Infrastructure Engineer
+111. Data Pipeline Engineer
+112. ETL Engineer
+113. Senior ETL Engineer
+114. ELT Engineer
+115. Data Integration Engineer
+116. Senior Data Integration Engineer
+117. Data Warehouse Engineer
+118. Senior Data Warehouse Engineer
+119. Data Warehouse Developer
+120. Data Warehouse Architect
+121. Big Data Engineer
+122. Senior Big Data Engineer
+123. Analytics Engineer
+124. Senior Analytics Engineer
+125. Data Operations Engineer
+126. DataOps Engineer
+127. Cloud Analytics Engineer
+128. Data Systems Engineer
+129. Enterprise Data Engineer
+130. Data Solutions Engineer
+131. SQL Developer
+132. Senior SQL Developer
+133. SQL Engineer
+134. Senior SQL Engineer
+135. SQL Database Engineer
+136. SQL Server Engineer
+137. Microsoft SQL Server Engineer
+138. SQL Server Developer
+139. Senior SQL Server Developer
+140. T SQL Developer
+141. Senior T SQL Developer
+142. Database Developer
+143. Senior Database Developer
+144. Database Engineer
+145. Senior Database Engineer
+146. Database Administrator
+147. SQL Database Administrator
+148. SQL Server Database Administrator
+149. Microsoft SQL Server DBA
+150. Senior SQL DBA
+151. Senior Database Administrator
+152. Cloud Database Engineer
+153. Azure Database Engineer
+154. Azure SQL Engineer
+155. Azure SQL Database Engineer
+156. Azure SQL DBA
+157. Database Reliability Engineer
+158. Database Operations Engineer
+159. Database Performance Engineer
+160. Database Migration Engineer
+161. Azure Data Platform Engineer
+162. Azure Data Solutions Engineer
+163. Azure Data Integration Engineer
+164. Azure Data Warehouse Engineer
+165. Azure Analytics Engineer
+166. Azure Synapse Engineer
+167. Azure Synapse Developer
+168. Azure Data Factory Engineer
+169. Azure Data Factory Developer
+170. ADF Developer
+171. Azure Databricks Engineer
+172. Azure Databricks Developer
+173. Databricks Engineer
+174. Senior Databricks Engineer
+175. Azure Fabric Engineer
+176. Microsoft Fabric Engineer
+177. Fabric Data Engineer
+178. Microsoft Fabric Developer
+179. Azure Data Lake Engineer
+180. Data Lake Engineer
+181. Business Intelligence Engineer
+182. BI Engineer
+183. Senior BI Engineer
+184. BI Developer
+185. Senior BI Developer
+186. Power BI Developer
+187. Senior Power BI Developer
+188. Power BI Engineer
+189. Power BI Consultant
+190. Data Analytics Engineer
+191. Analytics Platform Engineer
+192. Reporting Engineer
+193. Reporting Developer
+194. SQL BI Developer
+195. Microsoft BI Developer
+196. Data Migration Engineer
+197. Senior Data Migration Engineer
+198. Cloud Data Migration Engineer
+199. Azure Data Migration Engineer
+200. Database Migration Specialist
+201. SQL Migration Engineer
+202. Data Modernization Engineer
+203. Cloud Data Modernization Engineer
+204. Database Modernization Engineer
+205. Azure Database Migration Engineer
+206. Data Architect
+207. Azure Data Architect
+208. Cloud Data Architect
+209. Data Solutions Architect
+210. Data Platform Architect
+211. Database Architect
+212. SQL Server Architect
+213. Analytics Architect
+214. Data Engineering Consultant
+215. Azure Data Consultant
+216. Data Platform Consultant
+217. Database Consultant
+218. SQL Consultant
+219. Data Engineering Specialist
+220. Azure Data Specialist
+
+TOTAL JOB TITLES: 220

@@ -1,0 +1,19 @@
+{
+  "max_age_hours": 4,
+  "store_max_age_hours": 24,
+  "min_score": 20,
+  "remote_only": true,
+  "country": "US",
+  "weekend_priority": 15,
+  "after_hours_priority": 10,
+  "notification_threshold": 70,
+  "job_titles_file": "job_titles.txt",
+  "sources": {
+    "remoteok":       { "enabled": true, "interval_minutes": 10 },
+    "remotive":       { "enabled": true, "interval_minutes": 60 },
+    "jobicy":         { "enabled": true, "interval_minutes": 30 },
+    "weworkremotely": { "enabled": true, "interval_minutes": 10 },
+    "greenhouse":     { "enabled": true, "interval_minutes": 30 },
+    "lever":          { "enabled": true, "interval_minutes": 30 }
+  }
+}

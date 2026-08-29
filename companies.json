@@ -1,0 +1,13 @@
+{
+  "_comment": "Company career boards to poll. Greenhouse names come from boards.greenhouse.io/<name>, Lever names from jobs.lever.co/<name>. Bad names just log an error and are skipped, so it is safe to experiment.",
+  "greenhouse": [
+    "gitlab",
+    "elastic",
+    "huntress",
+    "cloudflare",
+    "datadog"
+  ],
+  "lever": [
+    "veeva"
+  ]
+}
