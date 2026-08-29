@@ -124,6 +124,12 @@ h2 small { font-weight: 400; text-transform: none; letter-spacing: 0; }
 .c-actions button.on { border-color: var(--ok); color: var(--ok); }
 
 #empty { color: var(--dim); }
+#empty strong { color: var(--text); }
+#widen-btn {
+  display: block; margin-top: 10px; cursor: pointer;
+  background: var(--accent); color: #08111e; font-weight: 700;
+  border: 0; border-radius: 8px; padding: 9px 16px; font-size: 14px;
+}
 footer { padding: 10px 16px; color: var(--dim); font-size: 12px; }
 
 /* ---------- tablet and below ---------- */

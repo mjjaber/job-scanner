@@ -46,9 +46,9 @@ function enrich(j) {
   };
 }
 
-function filtered() {
+function filtered(ageOverride) {
   const f = {
-    age: +$("f-age").value, sort: $("f-sort").value, score: +$("f-score").value || 0,
+    age: ageOverride ?? +$("f-age").value, sort: $("f-sort").value, score: +$("f-score").value || 0,
     status: $("f-status").value, cat: $("f-cat").value, source: $("f-source").value,
     q: $("f-q").value.trim().toLowerCase(), company: $("f-company").value.trim().toLowerCase(),
     remote: $("f-remote").checked, weekend: $("f-weekend").checked,
@@ -145,6 +145,15 @@ function render() {
   $("all-cards").innerHTML = jobs.map(card).join("");
   $("all-count").textContent = `${jobs.length} job${jobs.length === 1 ? "" : "s"}`;
   $("empty").hidden = jobs.length > 0;
+  if (jobs.length === 0) {
+    const curAge = +$("f-age").value;
+    const wider = curAge < 24 ? filtered(24).length : 0;
+    $("empty").innerHTML = wider > 0
+      ? `Nothing posted in the last ${curAge < 1 ? curAge * 60 + " min" : curAge + "h"} — job boards are quiet right now. ` +
+        `<strong>${wider} match${wider === 1 ? "" : "es"}</strong> from the last 24h are just outside your window. ` +
+        `<button id="widen-btn">Show last 24h</button>`
+      : "No jobs match the current filters. Widen the max age or lower the min score — or the sources are just quiet right now.";
+  }
 
   const gen = DATA.generated_at ? fmtAge(ageMinutes(DATA.generated_at)) : "?";
   $("scan-info").textContent = `last scan ${gen} · ${DATA.jobs.length} jobs in window`;
@@ -196,6 +205,11 @@ function populateSources() {
 
 /* ---------------- events ---------------- */
 document.addEventListener("click", e => {
+  if (e.target.id === "widen-btn") {
+    $("f-age").value = "24";
+    render();
+    return;
+  }
   const btn = e.target.closest("button[data-st]");
   const cardEl = e.target.closest(".card");
   if (btn && cardEl) {
